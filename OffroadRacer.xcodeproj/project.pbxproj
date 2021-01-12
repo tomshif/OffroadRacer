@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E287235825ACA71100BF174D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287235725ACA71100BF174D /* AppDelegate.swift */; };
+		E287235A25ACA71100BF174D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E287235925ACA71100BF174D /* GameScene.sks */; };
+		E287235C25ACA71100BF174D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E287235B25ACA71100BF174D /* Actions.sks */; };
+		E287235E25ACA71100BF174D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287235D25ACA71100BF174D /* GameScene.swift */; };
+		E287236025ACA71100BF174D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287235F25ACA71100BF174D /* ViewController.swift */; };
+		E287236225ACA71300BF174D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E287236125ACA71300BF174D /* Assets.xcassets */; };
+		E287236525ACA71300BF174D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287236325ACA71300BF174D /* Main.storyboard */; };
+		E287237125ACA71300BF174D /* OffroadRacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287237025ACA71300BF174D /* OffroadRacerTests.swift */; };
+		E287237C25ACA71300BF174D /* OffroadRacerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287237B25ACA71300BF174D /* OffroadRacerUITests.swift */; };
+		E287238D25ACAB1C00BF174D /* GameClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287238C25ACAB1C00BF174D /* GameClass.swift */; };
+		E287239225ACAB2B00BF174D /* AICarClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287239125ACAB2B00BF174D /* AICarClass.swift */; };
+		E287239725ACAB3700BF174D /* PCCarClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287239625ACAB3700BF174D /* PCCarClass.swift */; };
+		E287239C25ACAB3F00BF174D /* MapClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287239B25ACAB3F00BF174D /* MapClass.swift */; };
+		E28723A125ACAB6400BF174D /* PartClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28723A025ACAB6400BF174D /* PartClass.swift */; };
+		E28723AD25ACACA700BF174D /* PlayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28723AC25ACACA700BF174D /* PlayerClass.swift */; };
+		E28723B225ACACB600BF174D /* RaceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28723B125ACACB600BF174D /* RaceClass.swift */; };
+		E28723B725ACACD600BF174D /* HUDClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28723B625ACACD600BF174D /* HUDClass.swift */; };
+		E28723BD25ACAD0300BF174D /* random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28723BC25ACAD0300BF174D /* random.swift */; };
+		E28723C225ACAD1600BF174D /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28723C125ACAD1600BF174D /* Definitions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E287236D25ACA71300BF174D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E287234C25ACA71000BF174D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E287235325ACA71000BF174D;
+			remoteInfo = OffroadRacer;
+		};
+		E287237825ACA71300BF174D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E287234C25ACA71000BF174D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E287235325ACA71000BF174D;
+			remoteInfo = OffroadRacer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E287235425ACA71000BF174D /* OffroadRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OffroadRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E287235725ACA71100BF174D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E287235925ACA71100BF174D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		E287235B25ACA71100BF174D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		E287235D25ACA71100BF174D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E287235F25ACA71100BF174D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E287236125ACA71300BF174D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E287236425ACA71300BF174D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E287236625ACA71300BF174D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E287236725ACA71300BF174D /* OffroadRacer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OffroadRacer.entitlements; sourceTree = "<group>"; };
+		E287236C25ACA71300BF174D /* OffroadRacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OffroadRacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E287237025ACA71300BF174D /* OffroadRacerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffroadRacerTests.swift; sourceTree = "<group>"; };
+		E287237225ACA71300BF174D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E287237725ACA71300BF174D /* OffroadRacerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OffroadRacerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E287237B25ACA71300BF174D /* OffroadRacerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffroadRacerUITests.swift; sourceTree = "<group>"; };
+		E287237D25ACA71300BF174D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E287238C25ACAB1C00BF174D /* GameClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClass.swift; sourceTree = "<group>"; };
+		E287239125ACAB2B00BF174D /* AICarClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICarClass.swift; sourceTree = "<group>"; };
+		E287239625ACAB3700BF174D /* PCCarClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCCarClass.swift; sourceTree = "<group>"; };
+		E287239B25ACAB3F00BF174D /* MapClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapClass.swift; sourceTree = "<group>"; };
+		E28723A025ACAB6400BF174D /* PartClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartClass.swift; sourceTree = "<group>"; };
+		E28723AC25ACACA700BF174D /* PlayerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerClass.swift; sourceTree = "<group>"; };
+		E28723B125ACACB600BF174D /* RaceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceClass.swift; sourceTree = "<group>"; };
+		E28723B625ACACD600BF174D /* HUDClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDClass.swift; sourceTree = "<group>"; };
+		E28723BC25ACAD0300BF174D /* random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random.swift; sourceTree = "<group>"; };
+		E28723C125ACAD1600BF174D /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E287235125ACA71000BF174D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E287236925ACA71300BF174D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E287237425ACA71300BF174D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E287234B25ACA71000BF174D = {
+			isa = PBXGroup;
+			children = (
+				E287235625ACA71000BF174D /* OffroadRacer */,
+				E287236F25ACA71300BF174D /* OffroadRacerTests */,
+				E287237A25ACA71300BF174D /* OffroadRacerUITests */,
+				E287235525ACA71000BF174D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E287235525ACA71000BF174D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E287235425ACA71000BF174D /* OffroadRacer.app */,
+				E287236C25ACA71300BF174D /* OffroadRacerTests.xctest */,
+				E287237725ACA71300BF174D /* OffroadRacerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E287235625ACA71000BF174D /* OffroadRacer */ = {
+			isa = PBXGroup;
+			children = (
+				E287235D25ACA71100BF174D /* GameScene.swift */,
+				E28723A625ACAB9D00BF174D /* Core Classes */,
+				E28723BB25ACACF200BF174D /* Helper Files */,
+				E28723A525ACAB6B00BF174D /* Misc Files */,
+				E28723AB25ACAC6000BF174D /* SoundFX */,
+				E287236125ACA71300BF174D /* Assets.xcassets */,
+			);
+			path = OffroadRacer;
+			sourceTree = "<group>";
+		};
+		E287236F25ACA71300BF174D /* OffroadRacerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E287237025ACA71300BF174D /* OffroadRacerTests.swift */,
+				E287237225ACA71300BF174D /* Info.plist */,
+			);
+			path = OffroadRacerTests;
+			sourceTree = "<group>";
+		};
+		E287237A25ACA71300BF174D /* OffroadRacerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E287237B25ACA71300BF174D /* OffroadRacerUITests.swift */,
+				E287237D25ACA71300BF174D /* Info.plist */,
+			);
+			path = OffroadRacerUITests;
+			sourceTree = "<group>";
+		};
+		E28723A525ACAB6B00BF174D /* Misc Files */ = {
+			isa = PBXGroup;
+			children = (
+				E287235B25ACA71100BF174D /* Actions.sks */,
+				E287235725ACA71100BF174D /* AppDelegate.swift */,
+				E287235925ACA71100BF174D /* GameScene.sks */,
+				E287235F25ACA71100BF174D /* ViewController.swift */,
+				E287236325ACA71300BF174D /* Main.storyboard */,
+				E287236625ACA71300BF174D /* Info.plist */,
+				E287236725ACA71300BF174D /* OffroadRacer.entitlements */,
+			);
+			name = "Misc Files";
+			sourceTree = "<group>";
+		};
+		E28723A625ACAB9D00BF174D /* Core Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E287238C25ACAB1C00BF174D /* GameClass.swift */,
+				E287239125ACAB2B00BF174D /* AICarClass.swift */,
+				E287239625ACAB3700BF174D /* PCCarClass.swift */,
+				E287239B25ACAB3F00BF174D /* MapClass.swift */,
+				E28723A025ACAB6400BF174D /* PartClass.swift */,
+				E28723AC25ACACA700BF174D /* PlayerClass.swift */,
+				E28723B125ACACB600BF174D /* RaceClass.swift */,
+				E28723B625ACACD600BF174D /* HUDClass.swift */,
+			);
+			path = "Core Classes";
+			sourceTree = "<group>";
+		};
+		E28723AB25ACAC6000BF174D /* SoundFX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SoundFX;
+			sourceTree = "<group>";
+		};
+		E28723BB25ACACF200BF174D /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				E28723BC25ACAD0300BF174D /* random.swift */,
+				E28723C125ACAD1600BF174D /* Definitions.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E287235325ACA71000BF174D /* OffroadRacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E287238025ACA71300BF174D /* Build configuration list for PBXNativeTarget "OffroadRacer" */;
+			buildPhases = (
+				E287235025ACA71000BF174D /* Sources */,
+				E287235125ACA71000BF174D /* Frameworks */,
+				E287235225ACA71000BF174D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OffroadRacer;
+			productName = OffroadRacer;
+			productReference = E287235425ACA71000BF174D /* OffroadRacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E287236B25ACA71300BF174D /* OffroadRacerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E287238325ACA71300BF174D /* Build configuration list for PBXNativeTarget "OffroadRacerTests" */;
+			buildPhases = (
+				E287236825ACA71300BF174D /* Sources */,
+				E287236925ACA71300BF174D /* Frameworks */,
+				E287236A25ACA71300BF174D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E287236E25ACA71300BF174D /* PBXTargetDependency */,
+			);
+			name = OffroadRacerTests;
+			productName = OffroadRacerTests;
+			productReference = E287236C25ACA71300BF174D /* OffroadRacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E287237625ACA71300BF174D /* OffroadRacerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E287238625ACA71300BF174D /* Build configuration list for PBXNativeTarget "OffroadRacerUITests" */;
+			buildPhases = (
+				E287237325ACA71300BF174D /* Sources */,
+				E287237425ACA71300BF174D /* Frameworks */,
+				E287237525ACA71300BF174D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E287237925ACA71300BF174D /* PBXTargetDependency */,
+			);
+			name = OffroadRacerUITests;
+			productName = OffroadRacerUITests;
+			productReference = E287237725ACA71300BF174D /* OffroadRacerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E287234C25ACA71000BF174D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					E287235325ACA71000BF174D = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					E287236B25ACA71300BF174D = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = E287235325ACA71000BF174D;
+					};
+					E287237625ACA71300BF174D = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = E287235325ACA71000BF174D;
+					};
+				};
+			};
+			buildConfigurationList = E287234F25ACA71000BF174D /* Build configuration list for PBXProject "OffroadRacer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E287234B25ACA71000BF174D;
+			productRefGroup = E287235525ACA71000BF174D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E287235325ACA71000BF174D /* OffroadRacer */,
+				E287236B25ACA71300BF174D /* OffroadRacerTests */,
+				E287237625ACA71300BF174D /* OffroadRacerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E287235225ACA71000BF174D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E287235A25ACA71100BF174D /* GameScene.sks in Resources */,
+				E287236225ACA71300BF174D /* Assets.xcassets in Resources */,
+				E287235C25ACA71100BF174D /* Actions.sks in Resources */,
+				E287236525ACA71300BF174D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E287236A25ACA71300BF174D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E287237525ACA71300BF174D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E287235025ACA71000BF174D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28723C225ACAD1600BF174D /* Definitions.swift in Sources */,
+				E28723BD25ACAD0300BF174D /* random.swift in Sources */,
+				E28723AD25ACACA700BF174D /* PlayerClass.swift in Sources */,
+				E287236025ACA71100BF174D /* ViewController.swift in Sources */,
+				E287235E25ACA71100BF174D /* GameScene.swift in Sources */,
+				E287239225ACAB2B00BF174D /* AICarClass.swift in Sources */,
+				E287238D25ACAB1C00BF174D /* GameClass.swift in Sources */,
+				E28723B225ACACB600BF174D /* RaceClass.swift in Sources */,
+				E287239C25ACAB3F00BF174D /* MapClass.swift in Sources */,
+				E287239725ACAB3700BF174D /* PCCarClass.swift in Sources */,
+				E28723B725ACACD600BF174D /* HUDClass.swift in Sources */,
+				E287235825ACA71100BF174D /* AppDelegate.swift in Sources */,
+				E28723A125ACAB6400BF174D /* PartClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E287236825ACA71300BF174D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E287237125ACA71300BF174D /* OffroadRacerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E287237325ACA71300BF174D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E287237C25ACA71300BF174D /* OffroadRacerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E287236E25ACA71300BF174D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E287235325ACA71000BF174D /* OffroadRacer */;
+			targetProxy = E287236D25ACA71300BF174D /* PBXContainerItemProxy */;
+		};
+		E287237925ACA71300BF174D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E287235325ACA71000BF174D /* OffroadRacer */;
+			targetProxy = E287237825ACA71300BF174D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E287236325ACA71300BF174D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E287236425ACA71300BF174D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E287237E25ACA71300BF174D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E287237F25ACA71300BF174D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E287238125ACA71300BF174D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OffroadRacer/OffroadRacer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OffroadRacer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E287238225ACA71300BF174D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OffroadRacer/OffroadRacer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OffroadRacer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E287238425ACA71300BF174D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OffroadRacerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OffroadRacer.app/Contents/MacOS/OffroadRacer";
+			};
+			name = Debug;
+		};
+		E287238525ACA71300BF174D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OffroadRacerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OffroadRacer.app/Contents/MacOS/OffroadRacer";
+			};
+			name = Release;
+		};
+		E287238725ACA71300BF174D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OffroadRacerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OffroadRacer;
+			};
+			name = Debug;
+		};
+		E287238825ACA71300BF174D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OffroadRacerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OffroadRacer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E287234F25ACA71000BF174D /* Build configuration list for PBXProject "OffroadRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E287237E25ACA71300BF174D /* Debug */,
+				E287237F25ACA71300BF174D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E287238025ACA71300BF174D /* Build configuration list for PBXNativeTarget "OffroadRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E287238125ACA71300BF174D /* Debug */,
+				E287238225ACA71300BF174D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E287238325ACA71300BF174D /* Build configuration list for PBXNativeTarget "OffroadRacerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E287238425ACA71300BF174D /* Debug */,
+				E287238525ACA71300BF174D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E287238625ACA71300BF174D /* Build configuration list for PBXNativeTarget "OffroadRacerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E287238725ACA71300BF174D /* Debug */,
+				E287238825ACA71300BF174D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E287234C25ACA71000BF174D /* Project object */;
+}
