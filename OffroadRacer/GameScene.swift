@@ -12,10 +12,23 @@ class GameScene: SKScene {
     
     var gameState = -1
     
+    var tempBG=SKSpriteNode(imageNamed: "mmTempBack01")
+    var tempLogo=SKSpriteNode(imageNamed: "tempLogo")
+    var tempFrame=SKSpriteNode(imageNamed: "mmMenuFrame01")
     
     override func didMove(to view: SKView) {
         gameState=GAMESTATE.MAINMENU
         
+        addChild(tempBG)
+        
+        tempLogo.position = CGPoint(x: -size.width*0.35, y: size.height*0.35)
+        tempLogo.zPosition=1
+        addChild(tempLogo)
+        
+        tempFrame.position.x = -size.width*0.35
+        tempFrame.position.y = -size.height*0.1
+        tempFrame.zPosition=2
+        addChild(tempFrame)
     }
     
     
