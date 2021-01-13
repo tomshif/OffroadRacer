@@ -12,7 +12,7 @@ class GameClass
 {
     // variables
 
-
+    
 
     // constants
 

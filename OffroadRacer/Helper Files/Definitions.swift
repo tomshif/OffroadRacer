@@ -9,6 +9,8 @@ import Foundation
 
 struct GAMESTATE
 {
+    
+    static let STARTUP:Int = -1
     static let MAINMENU:Int=0
     static let INGAME:Int=2
     static let PAUSED:Int=4
