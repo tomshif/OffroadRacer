@@ -17,6 +17,7 @@ class GameScene: SKScene {
     var srAnchor=SKSpriteNode()
     var erAnchor=SKSpriteNode()
     var irAnchor=SKSpriteNode()
+    var rpAnchor=SKSpriteNode()
     
     var hudAnchor=SKSpriteNode()
     
@@ -39,6 +40,7 @@ class GameScene: SKScene {
         addChild(erAnchor)
         addChild(irAnchor)
         addChild(srAnchor)
+        addChild(rpAnchor)
         
 
         changeGameState(to: GAMESTATE.MAINMENU)
@@ -55,11 +57,13 @@ class GameScene: SKScene {
             handleClickMM(at: pos)
             
         case GAMESTATE.CHOOSERACE:
-            changeGameState(to: GAMESTATE.STARTRACE)
+            handleClickCR(at: pos)
             
         case GAMESTATE.STARTRACE:
             changeGameState(to: GAMESTATE.INRACE)
             
+        case GAMESTATE.RACEPREVIEW:
+            changeGameState(to: GAMESTATE.CHOOSERACE)
         case GAMESTATE.INRACE:
             changeGameState(to: GAMESTATE.ENDRACE)
             
@@ -110,6 +114,29 @@ class GameScene: SKScene {
         
     } // handleClickMM
     
+    func handleClickCR(at: CGPoint)
+    {
+        // This function is the handler for mouse clicks on the choose race screen
+        
+        for node in self.nodes(at: at)
+        {
+            if node.name != nil
+            {
+                if node.name=="rpButton"
+                {
+                    print("Race Preview click.")
+                    changeGameState(to: GAMESTATE.RACEPREVIEW)
+                }
+                else if node.name == "crButton"
+                {
+                    print("Choose Race clicked.")
+                    changeGameState(to: GAMESTATE.STARTRACE)
+                }
+            } // if the name is not nil
+        } // for each node
+        
+    } // handleClickCR()
+    
     override func keyDown(with event: NSEvent) {
         switch event.keyCode {
 
@@ -120,6 +147,8 @@ class GameScene: SKScene {
     
     func loadMainMenu()
     {
+        cam.position = CGPoint.zero
+        
         let tempBG=SKSpriteNode(imageNamed: "mmTempBack01")
         let tempLogo=SKSpriteNode(imageNamed: "tempLogo")
         let tempFrame=SKSpriteNode(imageNamed: "mmMenuFrame01")
@@ -140,11 +169,29 @@ class GameScene: SKScene {
     
     func loadChooseRaceScreen()
     {
+        // Temp Images
         var crTemp=SKSpriteNode(imageNamed: "crTemp")
+        crTemp.name="crButton"
         crAnchor.addChild(crTemp)
+        
+        // Temp image to go to Race Preview
+        var rpTemp=SKSpriteNode(imageNamed: "rpTemp")
+        rpTemp.name="rpButton"
+        rpTemp.setScale(0.5)
+        rpTemp.position=CGPoint(x: -size.width*0.25, y: -size.height*0.25)
+        crAnchor.addChild(rpTemp)
+        
         gameState=GAMESTATE.CHOOSERACE
         
     } // loadChooseRaceScreen
+    
+    func loadRacePreviewScreen()
+    {
+        var rpTemp=SKSpriteNode(imageNamed: "rpTemp")
+        rpAnchor.addChild(rpTemp)
+        
+        gameState=GAMESTATE.RACEPREVIEW
+    } // loadRacePreviewScreen()
     
     func loadStartRaceScreen()
     {
@@ -202,7 +249,18 @@ class GameScene: SKScene {
                     crAnchor.removeAllChildren()
                     loadStartRaceScreen()
                 }
+                else if to==GAMESTATE.RACEPREVIEW
+                {
+                    crAnchor.removeAllChildren()
+                    loadRacePreviewScreen()
+                }
             
+            case GAMESTATE.RACEPREVIEW:
+                if(to==GAMESTATE.CHOOSERACE)
+                {
+                    rpAnchor.removeAllChildren()
+                    loadChooseRaceScreen()
+                }
             case GAMESTATE.STARTRACE:
                 if(to==GAMESTATE.INRACE)
                 {
