@@ -64,6 +64,7 @@ class GameScene: SKScene {
             
         case GAMESTATE.RACEPREVIEW:
             changeGameState(to: GAMESTATE.CHOOSERACE)
+            
         case GAMESTATE.INRACE:
             changeGameState(to: GAMESTATE.ENDRACE)
             
