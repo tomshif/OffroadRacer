@@ -49,7 +49,11 @@ class GameScene: SKScene {
         addChild(srAnchor)
         addChild(rpAnchor)
         addChild(upAnchor)
+        cam.addChild(puAnchor)
+        puAnchor.name="puAnchor"
 
+    
+        
         changeGameState(to: GAMESTATE.MAINMENU)
     }// didMove
     

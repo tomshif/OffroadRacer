@@ -39,7 +39,9 @@ class PopUpClass
         text=popText
         
         frame=SKSpriteNode(imageNamed: "popFrame")
-        scene!.addChild(frame)
+        
+        parent!.addChild(frame)
+        
         frame.zPosition=1000
         
         let msgText=SKLabelNode(fontNamed: "Arial")
