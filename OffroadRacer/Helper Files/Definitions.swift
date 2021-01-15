@@ -19,5 +19,23 @@ struct GAMESTATE
     static let STARTRACE:Int=10     // sr
     static let ENDRACE:Int=12       // er
     static let CHOOSERACE:Int=14    // cr
+    static let BUYUPGRADES:Int=16   // bu
+    static let POPUP:Int=100        // pu
+    
 } // GAMESTATE
 
+struct PUBUTTONS
+{
+    static let ERROR:Int = -1
+    static let NO:Int=0
+    static let YES:Int=1
+    static let OK:Int=5
+} // PUBUTTONS
+
+struct POPTYPE
+{
+    static let DISABLED:Int = -1
+    static let INFO:Int=0
+    static let YESNO:Int=2
+    
+}

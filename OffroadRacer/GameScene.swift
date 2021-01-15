@@ -19,11 +19,16 @@ class GameScene: SKScene {
     var irAnchor=SKSpriteNode()
     var rpAnchor=SKSpriteNode()
     
+    var puAnchor=SKSpriteNode()
+    
+    
     var hudAnchor=SKSpriteNode()
     
     var hud=HUDClass()
     
     var cam=SKCameraNode()
+    
+    var currentPopUp:PopUpClass?
     
 
     
@@ -71,6 +76,9 @@ class GameScene: SKScene {
         case GAMESTATE.ENDRACE:
             changeGameState(to: GAMESTATE.CHOOSERACE)
             
+        case GAMESTATE.POPUP:
+            handleClickPU(at: pos)
+        
         default:
             print("Error - Unhandled click in gameState \(gameState).")
         }
@@ -106,7 +114,7 @@ class GameScene: SKScene {
             {
                 if node.name=="mmLogo"
                 {
-                    print("Logo click.")
+                    
                     changeGameState(to: GAMESTATE.CHOOSERACE)
                 }
             } // if the name is not nil
@@ -125,12 +133,12 @@ class GameScene: SKScene {
             {
                 if node.name=="rpButton"
                 {
-                    print("Race Preview click.")
+                    
                     changeGameState(to: GAMESTATE.RACEPREVIEW)
                 }
                 else if node.name == "crButton"
                 {
-                    print("Choose Race clicked.")
+                    
                     changeGameState(to: GAMESTATE.STARTRACE)
                 }
             } // if the name is not nil
@@ -138,9 +146,53 @@ class GameScene: SKScene {
         
     } // handleClickCR()
     
+    func handleClickPU(at: CGPoint) -> Int
+    {
+        // This function handles clicks when we're showing a pop up window
+        // For now, all it does is remove the pop up if the user clicks OK or YES
+        
+        
+        var retValue:Int=PUBUTTONS.ERROR
+
+        
+        if (currentPopUp != nil)
+        {
+            retValue = currentPopUp!.checkClick(pos: at)
+            
+            if (retValue == PUBUTTONS.OK && currentPopUp!.type == POPTYPE.INFO)
+            {
+                currentPopUp!.destroy()
+            }
+            else if (retValue == PUBUTTONS.YES && currentPopUp!.type == POPTYPE.YESNO)
+            {
+                currentPopUp!.destroy()
+            }
+            else if (retValue == PUBUTTONS.NO && currentPopUp!.type == POPTYPE.YESNO)
+            {
+                currentPopUp!.destroy()
+                print("User selected no.")
+            }
+            
+        } // if current popup isn't nil
+        else
+        {
+            print("ERROR - No current pop up while in pop up state.")
+        }
+        
+        return retValue
+        
+    } // handleClickPU()
+    
+    
     override func keyDown(with event: NSEvent) {
         switch event.keyCode {
 
+        case 35: // P -- Testing Pop up Menus
+            if (currentPopUp == nil)
+            {
+                currentPopUp=PopUpClass(theScene: self, popType: POPTYPE.INFO, parentNode: puAnchor, popText: "This is a test Pop up")
+            }
+            
         default:
             print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
         }
@@ -184,6 +236,12 @@ class GameScene: SKScene {
         
         gameState=GAMESTATE.CHOOSERACE
         
+        // Testing Pop Up Boxes
+        if (currentPopUp == nil)
+        {
+            currentPopUp=PopUpClass(theScene: self, popType: POPTYPE.YESNO, parentNode: puAnchor, popText: "Purchase engine upgrade for $1000?")
+        }
+        
     } // loadChooseRaceScreen
     
     func loadRacePreviewScreen()
@@ -199,6 +257,12 @@ class GameScene: SKScene {
         var srTemp=SKSpriteNode(imageNamed: "srTemp")
         srAnchor.addChild(srTemp)
         gameState=GAMESTATE.STARTRACE
+        
+        if (currentPopUp == nil)
+        {
+            currentPopUp=PopUpClass(theScene: self, popType: POPTYPE.YESNO, parentNode: puAnchor, popText: "Do you know how to use pop up windows?")
+        }
+        
     } // loadStartRaceScreen
     
     func loadInRaceScreen()
