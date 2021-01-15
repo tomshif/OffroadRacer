@@ -18,6 +18,8 @@ class PopUpClass
     // - Always check to make sure that currentPopUp in GameScene is nil before initiating a pop up. It should virtually impossible to double up, but just in case, check.
     // - If you need to handle the result of a YES/NO pop up, you need to handle it in the GameScene/handleClickPU() function.
     // - Make sure to check your text spacing. There is only one size of pop up box...make sure that your text fits appropriately.
+    // - in GameScene, if you need to see what the previous mode was (before the pop up), you can reach into currentPopUp.prevGameState to check. This will be important in how the pop up results are handled.
+    
     
     
     

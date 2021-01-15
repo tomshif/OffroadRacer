@@ -18,6 +18,8 @@ class GameScene: SKScene {
     var erAnchor=SKSpriteNode()
     var irAnchor=SKSpriteNode()
     var rpAnchor=SKSpriteNode()
+    var upAnchor=SKSpriteNode()
+    
     
     var puAnchor=SKSpriteNode()
     
@@ -46,7 +48,7 @@ class GameScene: SKScene {
         addChild(irAnchor)
         addChild(srAnchor)
         addChild(rpAnchor)
-        
+        addChild(upAnchor)
 
         changeGameState(to: GAMESTATE.MAINMENU)
     }// didMove
@@ -74,6 +76,9 @@ class GameScene: SKScene {
             changeGameState(to: GAMESTATE.ENDRACE)
             
         case GAMESTATE.ENDRACE:
+            changeGameState(to: GAMESTATE.CHOOSERACE)
+            
+        case GAMESTATE.UPGRADE:
             changeGameState(to: GAMESTATE.CHOOSERACE)
             
         case GAMESTATE.POPUP:
@@ -140,6 +145,10 @@ class GameScene: SKScene {
                 {
                     
                     changeGameState(to: GAMESTATE.STARTRACE)
+                }
+                else if node.name == "upButton"
+                {
+                    changeGameState(to: GAMESTATE.UPGRADE)
                 }
             } // if the name is not nil
         } // for each node
@@ -218,7 +227,23 @@ class GameScene: SKScene {
         tempFrame.position.y = -size.height*0.1
         tempFrame.zPosition=2
         mmAnchor.addChild(tempFrame)
+        
+        
+        if (currentPopUp == nil)
+        {
+            currentPopUp=PopUpClass(theScene: self, popType: POPTYPE.YESNO, parentNode: puAnchor, popText: "Testing - Do you know how to use pop up windows?")
+        }
+        
     } // load main menu
+    
+    func loadUpgradeScreen()
+    {
+        var upTemp=SKSpriteNode(imageNamed: "upTemp")
+        upTemp.name="upButton"
+        upAnchor.addChild(upTemp)
+        gameState=GAMESTATE.UPGRADE
+        
+    } // loadUpgradeScreen
     
     func loadChooseRaceScreen()
     {
@@ -234,13 +259,17 @@ class GameScene: SKScene {
         rpTemp.position=CGPoint(x: -size.width*0.25, y: -size.height*0.25)
         crAnchor.addChild(rpTemp)
         
+        // Temp image to go to upgrade
+        var upTemp=SKSpriteNode(imageNamed: "upTemp")
+        upTemp.name="upButton"
+        upTemp.position.x = -size.width*0.25
+        upTemp.position.y = size.height*0.25
+        upTemp.setScale(0.5)
+        crAnchor.addChild(upTemp)
+        
         gameState=GAMESTATE.CHOOSERACE
         
-        // Testing Pop Up Boxes
-        if (currentPopUp == nil)
-        {
-            currentPopUp=PopUpClass(theScene: self, popType: POPTYPE.YESNO, parentNode: puAnchor, popText: "Purchase engine upgrade for $1000?")
-        }
+
         
     } // loadChooseRaceScreen
     
@@ -258,10 +287,7 @@ class GameScene: SKScene {
         srAnchor.addChild(srTemp)
         gameState=GAMESTATE.STARTRACE
         
-        if (currentPopUp == nil)
-        {
-            currentPopUp=PopUpClass(theScene: self, popType: POPTYPE.YESNO, parentNode: puAnchor, popText: "Do you know how to use pop up windows?")
-        }
+
         
     } // loadStartRaceScreen
     
@@ -319,6 +345,11 @@ class GameScene: SKScene {
                     crAnchor.removeAllChildren()
                     loadRacePreviewScreen()
                 }
+                else if to==GAMESTATE.UPGRADE
+                {
+                    crAnchor.removeAllChildren()
+                    loadUpgradeScreen()
+                }
             
             case GAMESTATE.RACEPREVIEW:
                 if(to==GAMESTATE.CHOOSERACE)
@@ -347,7 +378,12 @@ class GameScene: SKScene {
                     loadChooseRaceScreen()
                 }
                 
-                
+            case GAMESTATE.UPGRADE:
+                if (to==GAMESTATE.CHOOSERACE)
+                {
+                    upAnchor.removeAllChildren()
+                    loadChooseRaceScreen()
+                }
             default:
                 print("Error - Unsupported current gameState: \(gameState)")
                 break
