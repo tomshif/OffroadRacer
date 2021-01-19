@@ -88,6 +88,7 @@ class PopUpClass
     
     init()
     {
+        // Do not use blank init
         
     }
     

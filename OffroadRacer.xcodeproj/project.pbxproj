@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2524F3A25AF418F006EE73C /* Sources.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E2524F3925AF418F006EE73C /* Sources.rtf */; };
+		E2524F3F25B1E1BD006EE73C /* PopUpClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2524F3E25B1E1BD006EE73C /* PopUpClass.swift */; };
 		E287235825ACA71100BF174D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287235725ACA71100BF174D /* AppDelegate.swift */; };
 		E287235A25ACA71100BF174D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E287235925ACA71100BF174D /* GameScene.sks */; };
 		E287235C25ACA71100BF174D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E287235B25ACA71100BF174D /* Actions.sks */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2524F3925AF418F006EE73C /* Sources.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Sources.rtf; sourceTree = "<group>"; };
+		E2524F3E25B1E1BD006EE73C /* PopUpClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpClass.swift; sourceTree = "<group>"; };
 		E287235425ACA71000BF174D /* OffroadRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OffroadRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287235725ACA71100BF174D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287235925ACA71100BF174D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				E28723A525ACAB6B00BF174D /* Misc Files */,
 				E28723AB25ACAC6000BF174D /* SoundFX */,
 				E287236125ACA71300BF174D /* Assets.xcassets */,
+				E2524F3925AF418F006EE73C /* Sources.rtf */,
 			);
 			path = OffroadRacer;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				E28723AC25ACACA700BF174D /* PlayerClass.swift */,
 				E28723B125ACACB600BF174D /* RaceClass.swift */,
 				E28723B625ACACD600BF174D /* HUDClass.swift */,
+				E2524F3E25B1E1BD006EE73C /* PopUpClass.swift */,
 			);
 			path = "Core Classes";
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 				E287235A25ACA71100BF174D /* GameScene.sks in Resources */,
 				E287236225ACA71300BF174D /* Assets.xcassets in Resources */,
 				E287235C25ACA71100BF174D /* Actions.sks in Resources */,
+				E2524F3A25AF418F006EE73C /* Sources.rtf in Resources */,
 				E287236525ACA71300BF174D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +338,7 @@
 				E28723AD25ACACA700BF174D /* PlayerClass.swift in Sources */,
 				E287236025ACA71100BF174D /* ViewController.swift in Sources */,
 				E287235E25ACA71100BF174D /* GameScene.swift in Sources */,
+				E2524F3F25B1E1BD006EE73C /* PopUpClass.swift in Sources */,
 				E287239225ACAB2B00BF174D /* AICarClass.swift in Sources */,
 				E287238D25ACAB1C00BF174D /* GameClass.swift in Sources */,
 				E28723B225ACACB600BF174D /* RaceClass.swift in Sources */,
@@ -513,6 +521,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -532,6 +541,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = TS.OffroadRacer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
