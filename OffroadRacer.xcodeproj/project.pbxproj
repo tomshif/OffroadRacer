@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79217B1C25B728F20030424C /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 79217B1925B728F20030424C /* MainMenu.sks */; };
+		79217B1D25B728F20030424C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79217B1A25B728F20030424C /* Assets.xcassets */; };
+		79217B1E25B728F20030424C /* DriveBeforeStart.sks in Resources */ = {isa = PBXBuildFile; fileRef = 79217B1B25B728F20030424C /* DriveBeforeStart.sks */; };
 		E2524F3A25AF418F006EE73C /* Sources.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E2524F3925AF418F006EE73C /* Sources.rtf */; };
 		E2524F3F25B1E1BD006EE73C /* PopUpClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2524F3E25B1E1BD006EE73C /* PopUpClass.swift */; };
 		E287235825ACA71100BF174D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287235725ACA71100BF174D /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79217B1925B728F20030424C /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenu.sks; path = "OffroadRacer/Particle FX/MainMenu.sks"; sourceTree = SOURCE_ROOT; };
+		79217B1A25B728F20030424C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "OffroadRacer/Particle FX/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		79217B1B25B728F20030424C /* DriveBeforeStart.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = DriveBeforeStart.sks; path = "OffroadRacer/Particle FX/DriveBeforeStart.sks"; sourceTree = SOURCE_ROOT; };
 		E2524F3925AF418F006EE73C /* Sources.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Sources.rtf; sourceTree = "<group>"; };
 		E2524F3E25B1E1BD006EE73C /* PopUpClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpClass.swift; sourceTree = "<group>"; };
 		E287235425ACA71000BF174D /* OffroadRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OffroadRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +109,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79217B1825B728D20030424C /* FX */ = {
+			isa = PBXGroup;
+			children = (
+				79217B1A25B728F20030424C /* Assets.xcassets */,
+				79217B1B25B728F20030424C /* DriveBeforeStart.sks */,
+				79217B1925B728F20030424C /* MainMenu.sks */,
+			);
+			path = FX;
+			sourceTree = "<group>";
+		};
 		E287234B25ACA71000BF174D = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,7 @@
 				E28723A625ACAB9D00BF174D /* Core Classes */,
 				E28723BB25ACACF200BF174D /* Helper Files */,
 				E28723A525ACAB6B00BF174D /* Misc Files */,
+				79217B1825B728D20030424C /* FX */,
 				E28723AB25ACAC6000BF174D /* SoundFX */,
 				E287236125ACA71300BF174D /* Assets.xcassets */,
 				E2524F3925AF418F006EE73C /* Sources.rtf */,
@@ -305,9 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E287235A25ACA71100BF174D /* GameScene.sks in Resources */,
+				79217B1C25B728F20030424C /* MainMenu.sks in Resources */,
 				E287236225ACA71300BF174D /* Assets.xcassets in Resources */,
 				E287235C25ACA71100BF174D /* Actions.sks in Resources */,
+				79217B1D25B728F20030424C /* Assets.xcassets in Resources */,
 				E2524F3A25AF418F006EE73C /* Sources.rtf in Resources */,
+				79217B1E25B728F20030424C /* DriveBeforeStart.sks in Resources */,
 				E287236525ACA71300BF174D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
